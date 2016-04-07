@@ -90,6 +90,6 @@ DogeDodge.Play.prototype = {
   },
   handleCollision: function() {
     console.log("OUUCHH");
-    game.state.start('Play')
+    game.state.start('Play');
   }
 };
