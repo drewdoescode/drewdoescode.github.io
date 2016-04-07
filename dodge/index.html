@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+   <head>
+        <title>Fabulous doge game</title>
+    </head>
+    <body>
+      <script src="phaser.js"></script>
+      <script src="play.js"></script>
+      <p>I love this doge game it is epicness even though its not there yet...</p>
+      <script>
+        var game = new Phaser.Game(320,568);
+        console.log("I AM LAKSDJNAKLSDJNAKLSDJNLAKJSNDLKAJNDSLKASJDKJANSD");
+        game.state.add('play' ,DogeDodge.Play);
+        game.state.start('play');
+      </script> 
+    </body>
+</html>
