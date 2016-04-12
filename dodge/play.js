@@ -83,7 +83,7 @@ DogeDodge.Play.prototype = {
     }
     if (this.fallingobject.y >= 568) {
       this.fallingobject.y = -32;
-      this.dodge.body.velocity.y = 0;
+      this.fallingobject.body.velocity.y = 0;
       this.fallingobject.x = game.rnd.integerInRange(0,320);
     }
     game.physics.arcade.collide(this.fallingobject,this.dodger,this.handleCollision);
