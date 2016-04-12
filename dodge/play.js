@@ -44,7 +44,7 @@ DogeDodge.Play.prototype = {
     this.fallingobject.animations.add('blink');
     this.fallingobject.animations.play('blink',2,true);
     game.physics.arcade.enable(this.fallingobject);
-    this.fallingobject.body.velocity.y = 1200;
+    this.fallingobject.body.velocity.y = 750;
     
     this.cursors = game.input.keyboard.createCursorKeys();
 
@@ -83,7 +83,7 @@ DogeDodge.Play.prototype = {
     }
     if (this.fallingobject.y >= 568) {
       this.fallingobject.y = -32;
-      this.fallingobject.body.velocity.y = 650;
+      this.fallingobject.body.velocity.y = 750;
       this.fallingobject.x = game.rnd.integerInRange(0,320);
     }
     game.physics.arcade.collide(this.fallingobject,this.dodger,this.handleCollision);
