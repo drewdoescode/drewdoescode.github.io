@@ -22,7 +22,7 @@ var CONFIG = {
         "velocity": -420,
         "frame": 0,
         "rotate": -40,
-        "norotate”: false
+        "norotate": false
       },
       "end": {
         "offset": 100,
