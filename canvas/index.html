@@ -20,17 +20,14 @@ h1 {
     color: #990000;
 }</style>
 <script>
-var canvas = 
-  
-document.querySelector("canvas");
+var canvas = document.querySelector("canvas");
 canvas.width = 4000;
 canvas.height = 160;
 
-var ctx = 
-canvas.getContext("2d");
+var ctx = canvas.getContext("2d");
+ctx.fillstyle = "red";
 ctx.rect(10,20,340,100);
 ctx.stroke();
-ctx.fillstyle = "red";
 ctx.font = "bold 30px Times New Roman";
 ctx.fillStyle = "red";
 ctx.filltext("You can't handle the heat!-_-",20,10);
