@@ -1,7 +1,8 @@
+<!DOCTYPE html>
 <html>
   <head>
   <title>The codepen canvas thing</title>
-  <head>
+  </head>
   <body>
   <img src="https://s-media-cache-ak0.pinimg.com/236x/36/62/af/3662afc9550170d09fb590971b0cf512.jpg">
   <br><canvas></canvas>
@@ -16,15 +17,14 @@
   ctx.font = "bold 30px Comic Sans MS;
   
   function drawRainbow (text,x,y) {
-    var colors =
-  ["red","black","yellow,"red","black","yellow"];
-    for (var i = 0; i < colors. length; i++) {
+    var colors = ["red","black","yellow","red","black","yellow"];
+    for (var i = 0; i < colors.length; i++) {
       ctx.fillStyle = colors[i];
-      ctx.fillText(text, x+ i * 3, y + i * 3)
+      ctx.fillText(text, x+ i * 3, y + i * 3);
     }
   }
   
   drawRainbow("Black and red and yellow and Black and red an yellow and Black and red and yellow!",20,70);
   </script>
-  <body>
-</html>
+  </body>
+</html> 
