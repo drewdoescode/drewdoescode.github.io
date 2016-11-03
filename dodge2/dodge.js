@@ -14,7 +14,7 @@ class Boot {
       console.log("Loading...");
     }
     create() {
-      console.log("Loaded")"
+      console.log("Loaded");
     }
   }
 
