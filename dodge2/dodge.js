@@ -12,6 +12,7 @@ class Boot {
   class Load {
     preload() {
       console.log("Loading...");
+      
     }
     create() {
       console.log("Loaded");
