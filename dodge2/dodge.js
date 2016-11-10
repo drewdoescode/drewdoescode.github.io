@@ -25,7 +25,7 @@ class Boot {
     create() {
       console.log("Entered Play State");
       this.background = this.add.tileSprite(0,0,320,568,"bg");
-      this.background.autoScroll(0,127386700);
+      this.background.autoScroll(0,600);
     }
   }
 
