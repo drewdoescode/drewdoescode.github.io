@@ -12,7 +12,7 @@ class Boot {
   class Load {
     preload() {
       console.log("Loading...");
-      is.load.image("bg","assets/background.png")
+       this.load.image("bg","assets/background.png")
     }
     create() {
       console.log("Loaded");
@@ -23,7 +23,9 @@ class Boot {
 
   class Play {
     create() {
-      console.log("Entered Play ");
+      console.log("Entered Play State");
+      this.background = this.add.tileSprite(0,0,320,568,"bg");
+      this.background.autoScroll(0,127386700);
     }
   }
 
