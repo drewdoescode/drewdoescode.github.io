@@ -12,10 +12,18 @@ class Boot {
   class Load {
     preload() {
       console.log("Loading...");
-      this.load.image("bg","assets/background.png")
+      is.load.image("bg","assets/background.png")
     }
     create() {
       console.log("Loaded");
+      this.state.start("Play")
+    
+    }
+  }
+
+  class Play {
+    create() {
+      console.log("Entered Play ");
     }
   }
 
@@ -23,4 +31,5 @@ class Boot {
 var game = new Phaser.Game(320,568);
 game.state.add("Boot",Boot);
 game.state.add("Load",Load);
+game.state.add("Play",Play);
 game.state.start("Boot");
