@@ -33,7 +33,7 @@ class Boot {
     preload() {
       console.log("Loading...");
        this.load.image("bg",C.bg.file)
-       this.load.spritesheet("player",C.p.width,C.p.height,C.p.frames)
+       this.load.spritesheet("player",C.p.file,C.p.width,C.p.height,C.p.frames)
     }
     create() {
       console.log("Loaded");
