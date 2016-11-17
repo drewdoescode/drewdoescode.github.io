@@ -9,9 +9,15 @@ var C = {
     "xspeed": 0,
     "yspeed": 600,
     "file": "assets/background.png"
+  },
+  "p": {
+    "file": "assets/player.png",
+    "width": 46,
+    "height": 64,
+    "frames: 2
   }
 }
-
+//( ͡° ͜ʖ ͡°)( ͡° ͜ʖ ͡°)( ͡° ͜ʖ ͡°)( ͡° ͜ʖ ͡°)( ͡° ͜ʖ ͡°)( ͡° ͜ʖ ͡°)( ͡° ͜ʖ ͡°)( ͡° ͜ʖ ͡°)
 class Boot {
   preload() {
     this.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
@@ -27,6 +33,7 @@ class Boot {
     preload() {
       console.log("Loading...");
        this.load.image("bg",C.bg.file)
+       this.load.spritesheet("player",C.p.width,C.p.height,C.p.frames)
     }
     create() {
       console.log("Loaded");
@@ -43,6 +50,11 @@ class Boot {
     }
   }
 
+//(∑_∑)(∑_∑)(∑_∑)(∑_∑)(∑_∑)(∑_∑)(∑_∑)(∑_∑)
+
+function restart() {
+  game.state.start("Boot");
+}
 
 var game = new Phaser.Game(C.game.width,C.game.height);
 game.state.add("Boot",Boot);
