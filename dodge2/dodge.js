@@ -14,10 +14,9 @@ var C = {
     "file": "assets/player.png",
     "width": 40,
     "height": 40,
-    "frames": 2,
-    "startx": 0,
-    "yspeed": 700,
-    "file": "assets/background.png"
+    "frames": 4,
+    "startx": 160,
+    "starty": 500
   }
 }
 //( ͡° ͜ʖ ͡°)( ͡° ͜ʖ ͡°)( ͡° ͜ʖ ͡°)( ͡° ͜ʖ ͡°)( ͡° ͜ʖ ͡°)( ͡° ͜ʖ ͡°)( ͡° ͜ʖ ͡°)( ͡° ͜ʖ ͡°)
