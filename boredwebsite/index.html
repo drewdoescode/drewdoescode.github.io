@@ -3,5 +3,21 @@
 <title> This is a website because it can be!</title>
 </head>
 <body>
-
+<script>
+  var canvas = document.querySelector("canvas");
+  canvas.width = 500;
+  canvas.height = 120;
+  var ctx = canvas.getContext("2d");
+  ctx.font = "bold 30px Comic Sans MS";
+  
+  function drawRainbow (text,x,y) {
+    var colors = ["red","black","red","black","red","black","yellow","black","red","black","yellow","black","yellow","black","red","black","red","black","yellow","black","yellow","black","yellow","black","yellow"];
+    for (var i = 0; i < colors.length; i++) {
+      ctx.fillStyle = colors[i];
+      ctx.fillText(text, x+ i * 3, y + i * 3);
+    }
+  }
+  
+  drawRainbow("Amazing!",20,70);
+  </script>
 </body>
