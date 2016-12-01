@@ -20,7 +20,7 @@ var C = {
     "fps": 15
   },
   "d": {
-    "file": "assets/dode.png",
+    "file": "assets/dodge.png",
     "width": 40,
     "height": 40,
     "frames": 1,
