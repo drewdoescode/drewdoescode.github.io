@@ -53,6 +53,8 @@ class Boot {
       this.player.anchor.set(0.5,0.5);
       this.player.smoothed = true;
       this.player.scale.set(1);
+      this.player.animations.add("anim");
+      this.player.animations.play("anim",C.p.fps,true);
     }
   }
 
