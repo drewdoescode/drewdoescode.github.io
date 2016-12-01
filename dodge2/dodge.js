@@ -87,7 +87,7 @@ class Boot {
       if (this.cursors.down.isDown) {
         this.player.y += C.p.speed;
       }
-      if (this.cursord.right.isDown) {
+      if (this.cursor.right.isDown) {
         this.player.x += C.p.speed;
       }
     }
