@@ -18,6 +18,15 @@ var C = {
     "startx": 160,
     "starty": 500,
     "fps": 15
+  },
+  "d": {
+    "file": "assets/dode.png",
+    "width": 64,
+    "height": 64,
+    "frames": 2,
+    "fps": 10,
+    "startx": 160,
+    "start": 32
   }
 }
 //( ͡° ͜ʖ ͡°)( ͡° ͜ʖ ͡°)( ͡° ͜ʖ ͡°)( ͡° ͜ʖ ͡°)( ͡° ͜ʖ ͡°)( ͡° ͜ʖ ͡°)( ͡° ͜ʖ ͡°)( ͡° ͜ʖ ͡°)
@@ -37,6 +46,7 @@ class Boot {
       console.log("Loading...");
        this.load.image("bg",C.bg.file)
        this.load.spritesheet("player",C.p.file,C.p.width,C.p.height,C.p.frames);
+       this.load.spritesheet("dodge",C.d.file,C.d,width,C.d.height,C.d.frames);
     }
     create() {
       console.log("Loaded");
@@ -48,14 +58,22 @@ class Boot {
   class Play {
     create() {
       console.log("Entered Play State");
-      this.background = this.add.tileSprite(0,0,C.bg.width,C.bg.height,"bg");
-      this.background.autoScroll(C.bg.xspeed,C.bg.yspeed);
+      this.bg = this.add.tileSprite(0,0,C.bg.width,C.bg.height,"bg");
+      this.bg.autoScroll(C.bg.xspeed,C.bg.yspeed);
+
       this.player = this.add.sprite(C.p.startx,C.p.starty,"player");
       this.player.anchor.set(0.5,0.5);
       this.player.smoothed = true;
       this.player.scale.set(1);
       this.player.animations.add("anim");
       this.player.animations.play("anim",C.p.fps,true);
+
+      this.dodge = this.add.sprite(C.d.startx,C.d.starty,"dodge");
+      this.dodge.anchor.set(0.5,0.5);
+      this.dodge.smoothed = false;
+      this.dodge.scale.set(1);
+      this.dodge.animations.add("anim");
+      this.dodge.animations.play("anim",C.d.fps,true);
     }
   }
 
