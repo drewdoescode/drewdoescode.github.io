@@ -47,7 +47,7 @@ class Boot {
        this.load.image("bg",C.bg.file)
        this.load.spritesheet("player",C.p.file,C.p.width,C.p.height,C.p.frames);
        this.load.spritesheet("dodge",C.d.file,C.d.width,C.d.height,C.d.frames);
-    }
+    
     create() {
       console.log("Loaded");
       this.state.start("Play")
@@ -74,6 +74,9 @@ class Boot {
       this.dodge.scale.set(1);
       this.dodge.animations.add("anim");
       this.dodge.animations.play("anim",C.d.fps,true);
+    }
+    update() {
+      console.log("Play.update() called.");
     }
   }
 
