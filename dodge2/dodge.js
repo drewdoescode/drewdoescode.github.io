@@ -21,10 +21,10 @@ var C = {
   },
   "d": {
     "file": "assets/dode.png",
-    "width": 64,
-    "height": 64,
-    "frames": 2,
-    "fps": 10,
+    "width": 40,
+    "height": 40,
+    "frames": 1,
+    //"fps": 10,
     "startx": 160,
     "start": 32
   }
