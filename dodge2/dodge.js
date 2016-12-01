@@ -75,7 +75,7 @@ class Boot {
       this.dodge.animations.add("anim");
       this.dodge.animations.play("anim",C.d.fps,true);
 
-      this.cursors = this.input.keyboard.creatCursorKeys();
+      this.cursors = this.input.keyboard.createCursorKeys();
     }
     update() {
       if (this.cursors.left.isDown) {
