@@ -17,7 +17,8 @@ var C = {
     "frames": 4,
     "startx": 160,
     "starty": 500,
-    "fps": 15
+    "fps": 15,
+    "speed": 5
   },
   "d": {
     "file": "assets/dodge.png",
