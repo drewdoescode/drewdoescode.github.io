@@ -27,7 +27,8 @@ var C = {
     "frames": 2,
     "fps": 6,
     "startx": 160,
-    "start": 32
+    "starty": 32,
+    "speed": 20
   }
 }
 //( ͡° ͜ʖ ͡°)( ͡° ͜ʖ ͡°)( ͡° ͜ʖ ͡°)( ͡° ͜ʖ ͡°)( ͡° ͜ʖ ͡°)( ͡° ͜ʖ ͡°)( ͡° ͜ʖ ͡°)( ͡° ͜ʖ ͡°)
@@ -91,9 +92,10 @@ class Boot {
       if (this.cursors.right.isDown) {
         this.player.x += C.p.speed;
       }
+      this.dodge.y += C.d.speed;
     }
     render() {
-      game.debug.text("x: " + this.dodge.x + ", y: " + this.dodge.y, 4, 16);
+    //  game.debug.text("x: " + this.dodge.x + ", y: " + this.dodge.y, 4, 16);
     }
   }
 
