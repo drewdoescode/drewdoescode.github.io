@@ -6,8 +6,8 @@ var C = {
   "bg": {
     "width": 320,
     "height": 568,
-    "xspeed": 0,
-    "yspeed": 600,
+    "xspeed": 600,
+    "yspeed": 0,
     "file": "assets/background.png"
   },
   "p": {
@@ -96,6 +96,7 @@ class Boot {
         this.dodge.y = C.d.starty;
       }
       this.dodge.y += C.d.speed;
+      this.dodge.x += C.d.speed / 4;
     }
     render() {
       game.debug.text("x: " + this.dodge.x + ", y: " + this.dodge.y, 4, 16);
