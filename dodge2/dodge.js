@@ -28,7 +28,7 @@ var C = {
     "fps": 6,
     "startx": 160,
     "starty": 32,
-    "speed": 20
+    "speed": 10
   }
 }
 //( ͡° ͜ʖ ͡°)( ͡° ͜ʖ ͡°)( ͡° ͜ʖ ͡°)( ͡° ͜ʖ ͡°)( ͡° ͜ʖ ͡°)( ͡° ͜ʖ ͡°)( ͡° ͜ʖ ͡°)( ͡° ͜ʖ ͡°)
@@ -78,8 +78,26 @@ class Boot {
       this.dodge.animations.play("anim",C.d.fps,true);
 
       this.cursors = this.input.keyboard.createCursorKeys();
+      this.points = 0
+      this.text = game.add.text(0,100, "0 points!", {
+        font: "65px Arial",
+        fill:"#ff0044",
+        align: "center"
+      }
     }
+
     update() {
+      if (this.player.x > C.game.width - this.player.width/2) {
+        this.player.x = C.game.width - this.player.width/2;
+      } else if (this.player.x < 0 + this.player.width/2) {
+        this.player.x = 0 + this.player.width/2;
+      }
+      if (this.player.y > C.game.height -this.player.height/2) {
+        this.player.y = C.game.height - this.player.height/2;
+      }  else if (this.player.y < 0 + this.player.height/2) {
+        this.player.y = 0 + this.player.height/2;
+      }
+      
       if (this.cursors.left.isDown) {
         this.player.x -= C.p.speed;
       }
@@ -93,10 +111,14 @@ class Boot {
         this.player.x += C.p.speed;
       }
       if (this.dodge.y > this.game.height) {
+        this.points += 1;
         this.dodge.y = C.d.starty;
         let px = (C.d.width * this.dodge.scale.x) / 2;
         let max = C.game.width - px
         this.dodge.x = randInt(px,max);
+      }
+      if (checkOverlap(this.dodge, this.player)) {
+        restart()
       }
       this.dodge.y += C.d.speed;
       this.dodge.x += C.d.speed / 10;
@@ -114,6 +136,13 @@ function restart() {
 
 function randInt(min,max) {
   return Math.floor(Math.random() * (max - min) + min);
+}
+function checkOverlap(dodge,player) {
+
+    var boundsA = dodge.getBounds();
+    var boundsB = player.getBounds();
+
+    return Phaser.Rectangle.intersects(boundsA, boundsB);
 }
 var game = new Phaser.Game(C.game.width,C.game.height);
 game.state.add("Boot",Boot);
