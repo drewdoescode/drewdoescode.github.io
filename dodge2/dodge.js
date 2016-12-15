@@ -94,12 +94,9 @@ class Boot {
       }
       if (this.dodge.y > this.game.height) {
         this.dodge.y = C.d.starty;
-        let px = (C.d.width * this.dodge.scale.x) /2;
+        let px = (C.d.width * this.dodge.scale.x) / 2;
         let max = C.game.width - px
-        let min = 0 + px
-        let newx = randInt(max);
-        if (newx < min){ newx = min }
-        this.dodge.x = newx
+        this.dodge.x = randInt(px,max);
       }
       this.dodge.y += C.d.speed;
       this.dodge.x += C.d.speed / 10;
@@ -115,8 +112,8 @@ function restart() {
   game.state.start("Boot");
 }
 
-function randInt(max) {
-  return Math.floor(Math.random() * max);
+function randInt(min,max) {
+  return Math.floor(Math.random() * (max - min) + min);
 }
 var game = new Phaser.Game(C.game.width,C.game.height);
 game.state.add("Boot",Boot);
