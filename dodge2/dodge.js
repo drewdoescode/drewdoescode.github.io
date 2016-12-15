@@ -83,7 +83,7 @@ class Boot {
         font: "65px Arial",
         fill:"#ff0044",
         align: "center"
-      }
+      });
     }
 
     update() {
@@ -112,6 +112,11 @@ class Boot {
       }
       if (this.dodge.y > this.game.height) {
         this.points += 1;
+        if (this.points > 1) {
+          this.text.setText(this.points + " points!");
+        } else {
+          this.text.setText(this.points + " point!");
+        }
         this.dodge.y = C.d.starty;
         let px = (C.d.width * this.dodge.scale.x) / 2;
         let max = C.game.width - px
