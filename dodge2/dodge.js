@@ -94,9 +94,15 @@ class Boot {
       }
       if (this.dodge.y > this.game.height) {
         this.dodge.y = C.d.starty;
+        let px = (C.d.width * this.dodge.scale.x) /2;
+        let max = C.game.width - px
+        let min = 0 + px
+        let newx = randInt(max);
+        if (newx < min){ newx = min }
+        this.dodge.x = newx
       }
       this.dodge.y += C.d.speed;
-      this.dodge.x += C.d.speed / 4;
+      this.dodge.x += C.d.speed / 10;
     }
     render() {
       game.debug.text("x: " + this.dodge.x + ", y: " + this.dodge.y, 4, 16);
