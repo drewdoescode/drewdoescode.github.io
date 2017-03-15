@@ -112,7 +112,7 @@ class Boot {
         this.player.x += C.p.speed;
       }
       if (this.dodge.y > this.game.height) {
-        this.points += 1;
+        this.points += 2;
         if (this.points > 1) {
           this.text.setText(this.points + " points!");
         } else {
